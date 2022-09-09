@@ -7,21 +7,34 @@
     <title> Computer Store</title>
 </head>
 <body>
-    <h3>Computer Store</h3>
-    <span Balance - ></span>
-    <span id="bankBalance" ></span>
-
-    <select name="getLoan" id="getLoan">
-    </select>
-    <button id="getLoanButton">Get a loan</button>
-    
+    <h1>Computer Store</h1>
     <select name="computers" id="computers">
-    </select>
+    </select> 
     <span>Price:  </span>
     <span id="price"></span>
-    <span>NOK</span>
-    <input type="number" name="quantity" id = "quantity" min="0" max="10" value="1">
-    <button id="pay">Buy now</button>
+    <span> NOK</span>
+    <br><button id="payButton">Buy now</button><br>
+
+    <h2>Joe Banker</h2>
+    <span>Bank Balance: </span>   
+    <span id="bankBalance"></span>    
+    <span>Kr. </span>
+    <br> <span>Loan balance: </span>
+    <span id="loanBalance"></span>
+    <span>Kr. </span>
+    <br>
+ 
+    <br>
+    <button id="getLoanButton" onclick="handleGetLoan()">Get a loan</button><br>
+
+    <h2>Work</h2>
+    <span>Balance: </span>   
+    <span id="salaryBalance"></span>    
+    <span>Kr. </span>
+
+    <br><button id="transferSalaryToBank">Bank</button>
+    <button id="workButton">Work</button><br>
     <script src="app.js"></script>
+
     </body>
     </html>
