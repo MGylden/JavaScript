@@ -1,0 +1,48 @@
+let arr = [1,2,3];
+for (let index = 0; index < arr.length; index++) {
+    const element = arr[index];
+    console.log(element);
+    
+}
+
+// console.log(arr["2"]);
+arr['a'] = 4;
+console.log(arr['a']);
+
+console.log(arr.length);
+arr.length = 0;
+console.log('arr.length:'+arr.length);
+console.log(arr['a']);
+console.log(arr.a);
+
+console.log(typeof arr);
+console.log(Array.isArray(arr));
+
+
+let obj = {};
+let x = 1;
+obj[x] = 1;
+console.log(obj[1]);
+console.log(obj);
+console.log(typeof obj);
+console.log(Array.isArray(obj));
+
+
+
+
+
+let arr = [0,1,2,3,4];
+
+console.log(arr[4]);
+arr.push(5);
+console.log(arr);
+
+arr[9] = 9;
+
+console.log(arr.length);
+console.log(arr);
+console.log(arr[8]);
+
+arr.length = 100;
+console.log(arr.length);
+console.log(arr);
