@@ -13,12 +13,13 @@
     <span>Price:  </span>
     <span id="price"></span>
     <span> NOK</span>
-    <br><button id="payButton">Buy now</button><br>
+    <br><button id="payButton" onclick="handlePay()">Buy now</button><br>
 
     <h2>Joe Banker</h2>
     <span>Bank Balance: </span>   
     <span id="bankBalance"></span>    
     <span>Kr. </span>
+
     <br> <span>Loan balance: </span>
     <span id="loanBalance"></span>
     <span>Kr. </span>
@@ -32,8 +33,9 @@
     <span id="salaryBalance"></span>    
     <span>Kr. </span>
 
-    <br><button id="transferSalaryToBank">Bank</button>
-    <button id="workButton">Work</button><br>
+    <br><button id="transferSalaryToBank" onclick="transfSalToBank()">Bank</button>
+    <button id="workButton" onclick="handleWorkButton()">Work</button><br>
+    <br><button id="payLoanButton" onclick="handlePayLoan()">Pay loan</button>
     <script src="app.js"></script>
 
     </body>
