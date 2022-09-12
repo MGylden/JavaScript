@@ -8,15 +8,28 @@ const workElement = document.getElementById("workButton");
 const salaryBalanceElement = document.getElementById("salaryBalance");
 const salaryTransferToBankElement = document.getElementById("transferSalaryToBank");
 const loanBalanceElement = document.getElementById("loanBalance");
+const pcDescElement = document.getElementById("pcDesc");
+const pcSpecsElement = document.getElementById("pcSpecs");
+const pcImgElement = document.getElementById("pcImg");
+const hideLoanElement = document.getElementById("hideLoan").style.visibility = "hidden";
 
 let computers = [];
 let loanBalance = 0;
 let loanExist = false;
-let bankBalance = 000;
-let salaryBalance = 000;
+let bankBalance = 0;
+let salaryBalance = 0;
 bBalanceElement.innerHTML = parseInt(bankBalance);
 salaryBalanceElement.innerHTML = parseInt(salaryBalance);
 
+
+// const urls = ["https://noroff-komputer-store-api.herokuapp.com/", "https://noroff-komputer-store-api.herokuapp.com/computers"];
+// const promises = urls.map(url => fetch(url));
+// await Promise.all(promises);
+
+// for (const promise of promises];{
+//     const data = await promise.json();
+    
+// }
 fetch("https://noroff-komputer-store-api.herokuapp.com/computers")
     .then(response => response.json())
     .then(data => computers = data)
@@ -26,6 +39,9 @@ fetch("https://noroff-komputer-store-api.herokuapp.com/computers")
 const addComputersToList = (computers) => {
     computers.forEach(x => addPcToList(x));
     priceElement.innerText = computers[0].price; 
+    pcDescElement.innerText = computers[0].description;
+    pcSpecsElement.innerHTML = computers[0].specs;
+    pcImgElement.src = "https://noroff-komputer-store-api.herokuapp.com/" + selectedComputer[0].image;
 }
 
 const addPcToList = (pc) => {
@@ -38,10 +54,9 @@ const addPcToList = (pc) => {
 const handleComputerChange = e => {
     const selectedComputer = computers[e.target.selectedIndex];
     priceElement.innerText = selectedComputer.price;
-}
-
-const handleBankBalance = () => {
-    bankBalance;
+    pcDescElement.innerText = selectedComputer.description;
+    pcSpecsElement.innerText = selectedComputer.specs;
+    pcImgElement.src = "https://noroff-komputer-store-api.herokuapp.com/" + selectedComputer.image;
 }
 
 const handleGetLoan = () => {
@@ -91,9 +106,11 @@ const transfSalToBank = () => {
 }
 
 const handlePayLoan = () => {
+    document.getElementById("hideLoan").style.visibility = "hidden";
     //Chore: Hide button
     if (loanExist==true) {
         //Chore: show button
+        document.getElementById("hideLoan").style.visibility = "visible";
         if (loanBalance>=salaryBalance) {
             loanBalance = parseInt(loanBalance) - salaryBalance;
             salaryBalance = 0;
@@ -133,7 +150,6 @@ const handlePay = () => {
 }
 
 computersElement.addEventListener("change", handleComputerChange);
-bBalanceElement.addEventListener("change", handleBankBalance);
 salaryBalanceElement.addEventListener("change",);
 payElement.addEventListener("click", handlePay);
 loanBalanceElement.addEventListener("change", handleGetLoan);

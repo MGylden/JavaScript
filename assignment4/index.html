@@ -1,29 +1,38 @@
 <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Computer Store</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <title>Komputer-Store</title>
 </head>
 <body>
-    <h1>Computer Store</h1>
+    <div class="container">
+    <h1>Komputer Store</h1>
     <select name="computers" id="computers">
     </select> 
     <span>Price:  </span>
     <span id="price"></span>
     <span> NOK</span>
     <br><button id="payButton" onclick="handlePay()">Buy now</button><br>
+    <br> <span id="pcSpecs"></span><br>
+    <br><span id="pcDesc"></span><br>
+    <br>
+    <img id="pcImg"/>
+    <br>
 
     <h2>Joe Banker</h2>
     <span>Bank Balance: </span>   
     <span id="bankBalance"></span>    
     <span>Kr. </span>
 
-    <br> <span>Loan balance: </span>
+    </div hidden class="hideLoan">Loan balance:
     <span id="loanBalance"></span>
-    <span>Kr. </span>
-    <br>
+    <span>Kr. </span> <div>
+    
  
     <br>
     <button id="getLoanButton" onclick="handleGetLoan()">Get a loan</button><br>
@@ -37,6 +46,7 @@
     <button id="workButton" onclick="handleWorkButton()">Work</button><br>
     <br><button id="payLoanButton" onclick="handlePayLoan()">Pay loan</button>
     <script src="app.js"></script>
+    </div>
 
     </body>
     </html>
