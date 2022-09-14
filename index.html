@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <title>Komputer Store</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@356&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Komputer Store</title>
   </head>
   <body>
     <div class="grid">
@@ -17,15 +17,15 @@
                 <table id="bank-table">
                     <tr>
                         <td>Balance</td>
-                        <td id="bankBalance">0 Kr</td>
+                        <td id="balance-cell">200 Kr</td>
                     </tr>
                     <tr id="loan-row">
                         <td>Loan</td>
-                        <td id="loanBalance">0 Kr</td>
+                        <td id="loan-cell">0 Kr</td>
                     </tr>
                 </table>
                 <div id="bank-buttons">
-                    <button id="getLoanButton" onclick="handleGetLoan()">Get a loan</button><br>
+                    <button id="loan-button">Get a Loan</button>
                 </div>
             </div>
         </div>
@@ -37,12 +37,12 @@
                 <table id="work-table">
                     <tr>
                         <td>Pay</td>
-                        <td id="salaryBalance">0 Kr.</td>
+                        <td id="pay-cell">200 Kr.</td>
                     </tr>
                 </table>
-                <br><button id="transferSalaryToBank" onclick="transfSalToBank()">Bank</button>
-                <button id="workButton" onclick="handleWorkButton()">Work</button><br>
-                <br><button id="payLoanButton" onclick="handlePayLoan()">Pay loan</button>
+                <button id="bank-button">Bank</button>
+                <button id="work-button">Work</button>
+                <button id="pay-loan-button">Repay</button>
             </div>
         </div>
         <div class="laptop">
@@ -50,21 +50,25 @@
                 <h1>Laptops</h1>
             </div>
             <div>
-                <select id="computers">
+                <select id="laptops">
                 </select>
-                <h2>Pc specs:</h2>
-                <span id="pcSpecs">
+                <h2>Features:</h2>
+                <span id="feature-list">
+                    <p>Feature 1</p>
+                    <p>feature 2</p>
+                    <p>feature 3</p>
                 </span>
             </div>
         </div>
         <div class="laptop-display">
-            <img id="pcImg">
+            <img id="image" src="">
             <div>
-                <p id="pcDesc">this is the description of the laptop</p>
+                <h1 id="name">Laptop name</h1>
+                <p id="description">this is the description of the laptop</p>
             </div>
             <div id="price-box">
                 <h2 id="price">2000 DKK</h2>
-                <button id="payButton" onclick="handlePay()">Buy Now</button>
+                <button id="buy">Buy Now</button>
             </div>
         </div>
     </div>

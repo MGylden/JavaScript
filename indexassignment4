@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <title>Komputer-Store</title>
+</head>
+<div class="container">
+    <h1>Komputer Store</h1> </div>
+<body>
+    <select name="computers" id="computers">
+    </select> 
+    <span>Price:  </span>
+    <span id="price"></span>
+    <span> NOK</span>
+    <br><button id="payButton" onclick="handlePay()">Buy now</button><br>
+    <br> <span id="pcSpecs"></span><br>
+    <br><span id="pcDesc"></span><br>
+    <br>
+    <img id="pcImg"/>
+    <br>
+
+    <h2>Joe Banker</h2>
+    <span>Bank Balance: </span>   
+    <span id="bankBalance"></span>    
+    <span>Kr. </span>
+
+    <br> <span>Loan balance: </span>
+    <span id="loanBalance"></span>
+    <span>Kr. </span>
+    <br>
+ 
+    <br>
+    <button id="getLoanButton" onclick="handleGetLoan()">Get a loan</button><br>
+
+    <h2>Work</h2>
+    <span>Balance: </span>   
+    <span id="salaryBalance"></span>    
+    <span>Kr. </span>
+
+    <br><button id="transferSalaryToBank" onclick="transfSalToBank()">Bank</button>
+    <button id="workButton" onclick="handleWorkButton()">Work</button><br>
+    <br><button id="payLoanButton" onclick="handlePayLoan()">Pay loan</button>
+    <script src="app.js"></script>
+    </div>
+
+    </body>
+    </html>
