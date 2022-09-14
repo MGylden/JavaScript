@@ -48,7 +48,6 @@ div > button:active, span > button:active {
     padding-bottom: 1.1rem;
     border-radius: 1rem;
   }
-/* END main grid*/
 
 /* START Bank box */
 .bank {
@@ -60,7 +59,6 @@ div > button:active, span > button:active {
   border-color: #18ab29;
   width: 100%
 }
-/* END Bank box */
 
 /* START Work box */
 .work {
@@ -81,9 +79,6 @@ div > button:active, span > button:active {
   background-color: #ec0ee1;
   border-color: #db36f1;
 }
-/* END Work box*/
-
-
 
 /* START Laptop select box */
 .laptop {
@@ -94,7 +89,6 @@ div > button:active, span > button:active {
   font-size: 0.9em;
   margin: 0;
 }
-/* END Laptop select box */
 
 /* START Laptop display box */
 .laptop-display {
@@ -104,13 +98,10 @@ div > button:active, span > button:active {
 }
 
 #pcImg {
-  margin: 5px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: white;
-  border-radius: 4px;
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
 }
-/* END Laptop display box */
 
   #payButton {
     background-color: #0e9aec;
@@ -176,6 +167,4 @@ div > button:active, span > button:active {
     grid-area: work;
   }
 
-  #repay {
-    grid-area: repay;
-  }
+ 

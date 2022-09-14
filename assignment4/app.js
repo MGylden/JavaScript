@@ -11,7 +11,7 @@ const loanBalanceElement = document.getElementById("loanBalance");
 const pcDescElement = document.getElementById("pcDesc");
 const pcSpecsElement = document.getElementById("pcSpecs");
 const pcImgElement = document.getElementById("pcImg");
-//const hideLoanElement = document.getElementById("hideLoan").style.visibility = "hidden";
+payLoanElement.style.visibility="hidden";
 
 let computers = [];
 let loanBalance = 0;
@@ -70,6 +70,7 @@ const handleGetLoan = () => {
             loanBalanceElement.innerText = parseInt(loanBalance);
         }
     }
+    payLoanElement.style.visibility="visible";
 }
 
 const handleWorkButton = () => {
@@ -79,7 +80,6 @@ const handleWorkButton = () => {
         loanExist = false;
     }
 }
-
 
 const transfSalToBank = () => {
     if(loanExist==true){
@@ -109,7 +109,6 @@ const handlePayLoan = () => {
     //Chore: Hide button
     if (loanExist==true) {
         //Chore: show button
-        //document.getElementById("hideLoan").style.visibility = "visible";
         if (loanBalance>=salaryBalance) {
             loanBalance = parseInt(loanBalance) - salaryBalance;
             salaryBalance = 0;
@@ -131,6 +130,7 @@ const handlePayLoan = () => {
         }
         }
     }
+    payLoanElement.style.visibility="hidden";
 }
 
 const handlePay = () => {
