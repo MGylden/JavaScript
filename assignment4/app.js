@@ -11,7 +11,7 @@ const loanBalanceElement = document.getElementById("loanBalance");
 const pcDescElement = document.getElementById("pcDesc");
 const pcSpecsElement = document.getElementById("pcSpecs");
 const pcImgElement = document.getElementById("pcImg");
-const hideLoanElement = document.getElementById("hideLoan").style.visibility = "hidden";
+//const hideLoanElement = document.getElementById("hideLoan").style.visibility = "hidden";
 
 let computers = [];
 let loanBalance = 0;
@@ -106,15 +106,13 @@ const transfSalToBank = () => {
 }
 
 const handlePayLoan = () => {
-    document.getElementById("hideLoan").style.visibility = "hidden";
     //Chore: Hide button
     if (loanExist==true) {
         //Chore: show button
-        document.getElementById("hideLoan").style.visibility = "visible";
+        //document.getElementById("hideLoan").style.visibility = "visible";
         if (loanBalance>=salaryBalance) {
             loanBalance = parseInt(loanBalance) - salaryBalance;
             salaryBalance = 0;
-            
             loanBalanceElement.innerText = parseInt(loanBalance);
             salaryBalanceElement.innerText = parseInt(salaryBalance);
             loanExist = false;
